@@ -4,7 +4,6 @@ Implements simple recurrent network and a stacked recurrent network in `numpy` a
 
 `main.py` is a thin wrapper that calls the appropriate model class and trains a recurrent network on [tinyshakespeare](https://github.com/karpathy/char-rnn/blob/master/data/tinyshakespeare/input.txt). After training for a while, we can autoregressively sample random poems from the model.
 
-*Note : As of now, only Stacked-RNN and RNN have been implemented. Look forward to implementations of LSTM, GRU and Transformers in numpy/torch*
 
 ## Requirements
 
@@ -18,6 +17,11 @@ Edit the `main.py` file to configure a RNN model by specifying number of hidden 
 ```bash
 $ python3 main.py
 ```
+
+## TODO
+
+1. Multilayer GRU and LSTM
+2. Transformer
 
 ## License 
 
