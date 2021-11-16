@@ -1,10 +1,11 @@
 import torch
 import numpy as np
-from model.RNN import RNN
+import sys
+from model.Stacked_RNN import RNN
 
-torch.set_num_threads(2)
+torch.set_num_threads(8)
 
-data = open("./data/input.txt","r").read()
+data = open(sys.argv[1],"r").read()
 vocab = list(set(data))
 data_size,vocab_size = len(data),len(vocab)
 print('data has %d characters, %d unique.' % (data_size, vocab_size))
@@ -17,7 +18,7 @@ seq_length = 25
 learning_rate = 1e-3
 layers = 3
 device = torch.device("cpu")
-# device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+# device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu") #Uncomment this line to make torch use GPU
 
 rnn = RNN(layers=layers, hidden_size=hidden_size,vocab_size=vocab_size,seq_length=seq_length)
 

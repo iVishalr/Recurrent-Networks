@@ -1,6 +1,7 @@
 test
 gradCheck.py
-
+LSTM_Linalg.txt
+data/linux.txt
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

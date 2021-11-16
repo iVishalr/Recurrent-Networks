@@ -1,7 +1,7 @@
 import numpy as np
-
+import sys
 #read the data from the file
-data = open('./data/input.txt','r').read()
+data = open(sys.argv[1],'r').read()
 characters = list(set(data))
 data_size, vocab_size = len(data),len(characters)
 
